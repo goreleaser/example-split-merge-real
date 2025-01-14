@@ -20,7 +20,7 @@ jobs:
       DOCKER_CLI_EXPERIMENTAL: "enabled"
       flags: ""
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - uses: docker/setup-qemu-action@v3
@@ -75,7 +75,7 @@ jobs:
       DOCKER_CLI_EXPERIMENTAL: "enabled"
       flags: ""
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - uses: docker/setup-qemu-action@v3
