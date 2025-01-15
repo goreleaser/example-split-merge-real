@@ -60,7 +60,7 @@ jobs:
           path: dist/windows
           key: windows-${{ env.sha_short }}${{ env.flags }}
           enableCrossOsArchive: true
-      - uses: goreleaser/goreleaser-action@v4
+      - uses: goreleaser/goreleaser-action@v6
         with:
           distribution: goreleaser-pro
           version: latest
@@ -115,7 +115,7 @@ jobs:
           enableCrossOsArchive: true
 
       # release
-      - uses: goreleaser/goreleaser-action@v4
+      - uses: goreleaser/goreleaser-action@v6
         if: steps.cache.outputs.cache-hit != 'true' # do not run if cache hit
         with:
           distribution: goreleaser-pro
